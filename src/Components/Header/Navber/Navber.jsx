@@ -16,7 +16,7 @@ const Navber = () => {
          <li>
            <NavLink
              className={({ isActive, isLoading }) =>
-               isLoading ? "loading" : isActive ? "text-white bg-black " : ""
+               isLoading ? "loading" : isActive ? "text-black bg-white hover:text-white " : ""
              }
              to="/"
            >
@@ -26,7 +26,7 @@ const Navber = () => {
          <li>
            <NavLink
              className={({ isActive, isLoading }) =>
-               isLoading ? "loading" : isActive ? "text-white bg-black " : ""
+               isLoading ? "loading" : isActive ? "text-black bg-white hover:text-white " : ""
              }
              to="/allDetails"
            >
@@ -36,7 +36,7 @@ const Navber = () => {
          <li>
            <NavLink
              className={({ isActive, isLoading }) =>
-               isLoading ? "loading" : isActive ? "text-white bg-black " : ""
+               isLoading ? "loading" : isActive ? "text-black bg-white hover:text-yellow-300" : ""
              }
              to="/serviceData/:id"
            >
@@ -46,7 +46,7 @@ const Navber = () => {
          <li>
            <NavLink
              className={({ isActive, isLoading }) =>
-               isLoading ? "loading" : isActive ? "text-white bg-black " : ""
+               isLoading ? "loading" : isActive ? "text-black bg-white  hover:text-yellow-300" : ""
              }
              to="/register"
            >
@@ -57,8 +57,8 @@ const Navber = () => {
      );
 
     return (
-      <div>
-        <div id="header-nav" className=" text-white bg-transparent  ">
+      <div className="backdrop-blur sticky z-20 top-0 ">
+        <div id="header-nav" className="  text-white bg-transparent  ">
           <div className="  md:-w-full lg:max-w-6xl mx-auto">
             <div className="navbar rounded-lg">
               <div className="navbar-start">
@@ -70,14 +70,14 @@ const Navber = () => {
                   <span>
                     <img
                       className="w-10 rounded-full"
-                      src="/src/assets/logo.jpg"
+                      src="/src/assets/react.svg"
                       alt=""
                     />
                   </span>
-                  <span>Navber</span>
+                  <span>Technology</span>
                 </h1>
                 <div className="dropdown">
-                  <label tabIndex={0} className="btn btn-ghost lg:hidden">
+                  <label tabIndex={0} className="btn btn-ghost  lg:hidden">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-5 w-5"
@@ -95,7 +95,7 @@ const Navber = () => {
                   </label>
                   <ul
                     tabIndex={0}
-                    className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                    className="menu menu-sm dropdown-content text-black mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
                   >
                     {navLink}
                   </ul>
@@ -125,14 +125,14 @@ const Navber = () => {
                   <div>
                     <button
                       onClick={handleSignOut}
-                      className="btn bg-orange-600 hover:bg-black hover:text-white "
+                      className="btn bg-white hover:bg-black hover:text-white "
                     >
                       LogOut
                     </button>
                   </div>
                 ) : (
                   <Link to="/login">
-                    <button className="btn bg-orange-600 hover:bg-black hover:text-white ">
+                    <button className="btn bg-white hover:bg-black hover:text-white ">
                       Login
                     </button>
                   </Link>

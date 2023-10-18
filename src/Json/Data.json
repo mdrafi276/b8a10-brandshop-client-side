@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "title": "Software Engineer",
+    "image": "https://example.com/images/alice.jpg",
+    "description": "Alice Johnson is a skilled software engineer with a passion for building robust and scalable applications."
+  },
+  {
+    "id": 2,
+    "name": "Mark Smith",
+    "title": "Network Administrator",
+    "image": "https://example.com/images/mark.jpg",
+    "description": "Mark Smith specializes in network administration and ensures the smooth operation of IT infrastructure."
+  },
+  {
+    "id": 3,
+    "name": "Emily Davis",
+    "title": "Data Analyst",
+    "image": "https://example.com/images/emily.jpg",
+    "description": "Emily Davis is a data analyst who uncovers valuable insights from data to drive business decisions."
+  },
+  {
+    "id": 4,
+    "name": "James Wilson",
+    "title": "Cybersecurity Expert",
+    "image": "https://example.com/images/james.jpg",
+    "description": "James Wilson is a cybersecurity expert who protects organizations from digital threats and cyberattacks."
+  },
+  {
+    "id": 5,
+    "name": "Sara Brown",
+    "title": "UI/UX Designer",
+    "image": "https://example.com/images/sara.jpg",
+    "description": "Sara Brown is a creative UI/UX designer who crafts beautiful and user-friendly interfaces."
+  },
+  {
+    "id": 6,
+    "name": "Michael Lee",
+    "title": "AI Researcher",
+    "image": "https://example.com/images/michael.jpg",
+    "description": "Michael Lee is an AI researcher dedicated to advancing artificial intelligence and machine learning."
+  }
+]
