@@ -51,7 +51,12 @@ const Register = () => {
                   displayName: name,
                   photoURL: photo,
                 }).then(() => {
-                  Swal("Success!", "Your register Success", "success");
+                 Swal.fire({
+                   icon: "Success!",
+                   title: "Success",
+                   text: "Your register Success!",
+                   footer: '<a href="">Why do I have this issue?</a>',
+                 });
                 });
                 // navigate ater register
                 navigate(location?.state ? location.state : "/");
@@ -60,7 +65,7 @@ const Register = () => {
                 Swal.fire({
                   icon: "error",
                   title: "Oops...",
-                  text: "  wrong!",
+                  text: "Something went wrong!",
                   footer: '<a href="">Why do I have this issue?</a>',
                 })(error);
               });

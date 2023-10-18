@@ -21,14 +21,19 @@ const navigate = useNavigate();
     console.log(email, password);
 signIn(email, password)
   .then(() => {
-    Swal("Success!", "Your Login Success!", "success");
+   Swal.fire({
+     icon: "error",
+     title: "Oops...",
+     text: "Something went wrong!",
+     footer: '<a href="">Why do I have this issue?</a>',
+   });
     navigate(location?.state ? location.state : "/");
   })
   .catch((error) => {
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: " password wrong!",
+      text: "Something went wrong!",
       footer: '<a href="">Why do I have this issue?</a>',
     })(error);
   });
@@ -38,12 +43,12 @@ signIn(email, password)
 const hangleGoogleLogin = () => {
   googleLogin()
     .then(() => {
-      Swal.fire({
-        icon: "Seccess",
-        title: "Good job",
-        text: "Something went wrong!",
-        footer: '<a href="">Why do I have this issue?</a>',
-      });
+     Swal.fire({
+       icon: "error",
+       title: "Oops...",
+       text: "Something went wrong!",
+       footer: '<a href="">Why do I have this issue?</a>',
+     });
     })
     .catch();
 };
