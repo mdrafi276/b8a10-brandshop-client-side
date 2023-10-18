@@ -28,9 +28,9 @@ const Navber = () => {
              className={({ isActive, isLoading }) =>
                isLoading ? "loading" : isActive ? "text-black bg-white hover:text-white " : ""
              }
-             to="/allDetails"
+             to="/addPorduct"
            >
-             About
+             AddProducts
            </NavLink>
          </li>
          <li>
