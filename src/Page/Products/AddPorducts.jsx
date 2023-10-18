@@ -1,19 +1,40 @@
+import Swal from "sweetalert2";
 import Navber from "../../Components/Header/Navber/Navber";
 
 const AddPorducts = () => {
  const handleAddPorduct = e =>{
-    e.preventDefault()
-    const form = e.target;
-    const name = form.name.value;
-    const type = form.type.value;
-    const price = form.price.value;
-    const driscription = form.driscription.value;
-    const photo = form.photo.value;
-    const rating = form.rating.value;
-    const brandName = form.brandName.value
-    console.log(name, type, price, driscription, brandName, photo, rating);
- }
+   
+    e.preventDefault();
+    const name = e.target.name.value;
+    const type = e.target.type.value;
+    const price = e.target.price.value;
+    const photo = e.target.photo.value;
+    const rating = e.target.rating.value;
+    const brandName = e.target.brandName.value;
+    const driscription = e.target.driscription.value;
 
+    const newBrand ={ name, type, price, photo, rating, brandName, driscription}
+    console.log(newBrand);
+    fetch("http://localhost:5000/brand", {
+      method:'POST',
+      headers:{
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(newBrand)
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      if(data.insertedId){
+        Swal.fire({
+          icon: "success",
+          title: "success",
+          text: "User added success!",
+          footer: '<a href="">Why do I have this issue?</a>',
+        });
+      }
+    })
+ }
     return (
       <div className="bg-[#010313] h-[100vh]">
         <Navber></Navber>
@@ -26,7 +47,9 @@ const AddPorducts = () => {
             <div className=" text-white grid grid-cols-1 lg:grid-cols-2  lg:mt-10 gap-4 w-full lg:gap-10 lg:ml-5">
               <div className="lg:w-[450px]">
                 <div className="relative h-10 lg:h-14 w-full  md:min-w-[200px]">
-                  <input type="name"
+                  <input
+                    type="text"
+                    name="name"
                     className="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     placeholder="  "
                   />
@@ -38,7 +61,9 @@ const AddPorducts = () => {
               {/* input name */}
               <div className="lg:w-[450px]">
                 <div className="relative h-10 lg:h-14 w-full  md:min-w-[200px]">
-                  <input type="type"
+                  <input
+                    type="type"
+                    name="type"
                     className="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     placeholder=" "
                   />
@@ -50,7 +75,9 @@ const AddPorducts = () => {
               {/* input type */}
               <div className="lg:w-[450px]">
                 <div className="relative h-10 lg:h-14 w-full  md:min-w-[200px]">
-                  <input type="price"
+                  <input
+                    type="text"
+                    name="price"
                     className="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     placeholder=" "
                   />
@@ -62,7 +89,9 @@ const AddPorducts = () => {
               {/* input price  */}
               <div className="lg:w-[450px]">
                 <div className="relative h-10 lg:h-14 w-full  md:min-w-[200px]">
-                  <input type="brandName"
+                  <input
+                    type="text"
+                    name="brandName"
                     className="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     placeholder=" "
                   />
@@ -74,7 +103,9 @@ const AddPorducts = () => {
               {/* input brind */}
               <div className="lg:w-[450px]">
                 <div className="relative h-10 lg:h-14 w-full  md:min-w-[200px]">
-                  <input type="driscription"
+                  <input
+                    type="text"
+                    name="driscription"
                     className="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     placeholder=" "
                   />
@@ -86,7 +117,9 @@ const AddPorducts = () => {
               {/* input short */}
               <div className="lg:w-[450px]">
                 <div className="relative h-10 lg:h-14 w-full  md:min-w-[200px]">
-                  <input type="rating"
+                  <input
+                    type="text"
+                    name="rating"
                     className="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     placeholder=" "
                   />
@@ -99,7 +132,9 @@ const AddPorducts = () => {
             <div className="">
               <div className="mt-5 lg:w-[960px] mx-auto">
                 <div className="relative h-10 lg:h-14 w-full  md:min-w-[200px]">
-                  <input type="photo"
+                  <input
+                    type="text"
+                    name="photo"
                     className="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     placeholder=" "
                   />
@@ -109,13 +144,12 @@ const AddPorducts = () => {
                 </div>
               </div>
             </div>
+            <div className="mt-5">
+              <button type="submit" className="btn btn-primary w-full">
+                Add product
+              </button>
+            </div>
           </form>
-          <div className="mt-5">
-            <button  type="submit" className="btn btn-primary w-full">
-              Add product
-            </button>
-            
-          </div>
         </div>
       </div>
     );

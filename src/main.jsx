@@ -7,6 +7,9 @@ import Login from './Page/Login/Login';
 import Register from './Page/Register/Register';
 import { AuthProvider } from './Provider/AuthProvider';
 import AddPorducts from './Page/Products/AddPorducts';
+import PrivetRoute from './Provider/PrivetRoute';
+import AllProduct from './Page/AllPorduct/AllProduct';
+import Slider from './Components/Slider/Slider';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,7 +29,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/addPorduct",
-        element: <AddPorducts></AddPorducts>,
+        element: <PrivetRoute><AddPorducts></AddPorducts></PrivetRoute>,
+      },
+      {
+        path:"/allProduct",
+        element: <AllProduct></AllProduct>,
+      },
+      {
+        path:"/slidr",
+        element: <Slider></Slider>,
       },
     ],
   },

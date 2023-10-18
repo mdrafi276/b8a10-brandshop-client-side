@@ -4,9 +4,9 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-      <div className="sticky bottom-1 ">
-        <footer className="footer section-footers lg:h-[400px] p-20  ">
-          <nav>
+      <div className=" ">
+        <footer className="footer section-footers lg:h-[500px] pl-10 pt-5 md:pt-24   ">
+          <nav >
             <header className=" text-white hover:text-white footer-title">
               CONTACT US
             </header>
