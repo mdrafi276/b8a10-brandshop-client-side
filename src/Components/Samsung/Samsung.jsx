@@ -9,9 +9,10 @@ const Samsung = () => {
           <div className="carousel w-full h-[600px] -mt-20">
             <div id="slide1" className="carousel-item relative w-full">
               <img
-                src="https://i.ibb.co/7ttkvQg/business-executives-show-their-approval-by-raising-hands.jpg"
+                src="https://i.ibb.co/yBg5mvp/pexels-largo-polacsek-241345.jpg"
                 className="w-full"
               />
+
               <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                 <a href="#slide4" className="btn btn-circle">
                   ❮
@@ -23,7 +24,7 @@ const Samsung = () => {
             </div>
             <div id="slide2" className="carousel-item relative w-full">
               <img
-                src="https://i.ibb.co/7ttkvQg/business-executives-show-their-approval-by-raising-hands.jpg"
+                src="https://i.ibb.co/P6MpDSC/pexels-t-m-7022713.jpg"
                 className="w-full"
               />
               <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -37,7 +38,7 @@ const Samsung = () => {
             </div>
             <div id="slide3" className="carousel-item relative w-full">
               <img
-                src="https://i.ibb.co/7ttkvQg/business-executives-show-their-approval-by-raising-hands.jpg"
+                src="https://i.ibb.co/GnDYLSV/pexels-arnie-chou-889406.jpg"
                 className="w-full"
               />
               <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -52,7 +53,7 @@ const Samsung = () => {
           </div>
         </div>
         {/* text title  */}
-        <div className="lg:w-[800px] md:ml-[12rem] md:w-[400px] ml-[6.75rem] w-[200px] border-2 text-center lg:ml-[16rem]   absolute text-white -mt-96">
+        <div className="lg:w-[800px] md:ml-[12rem] md:w-[400px] ml-[6.75rem] w-[200px]  text-center lg:ml-[16rem]   absolute text-white -mt-96">
           <h1 className="  font-bold md:text-[30px] text-[25px] lg:text-[40px]">
             true sound created by real artlsls
           </h1>
