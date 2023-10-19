@@ -4,7 +4,7 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-      <div className=" ">
+      <div className=" mt-0 ">
         <footer className="footer section-footers lg:h-[500px] pl-10 pt-5 md:pt-24   ">
           <nav >
             <header className=" text-white hover:text-white footer-title">

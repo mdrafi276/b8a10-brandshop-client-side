@@ -1,44 +1,44 @@
 [
   {
     "id": 1,
-    "name": "Alice Johnson",
-    "title": "Software Engineer",
-    "image": "https://example.com/images/alice.jpg",
+    "name": "Google",
+    "title": "",
+    "image": "https://i.ibb.co/D72NmSh/32704568-m024t0235-h-podium-stage-19sep22.jpg",
     "description": "Alice Johnson is a skilled software engineer with a passion for building robust and scalable applications."
   },
   {
     "id": 2,
-    "name": "Mark Smith",
-    "title": "Network Administrator",
-    "image": "https://example.com/images/mark.jpg",
+    "name": "Samsung",
+    "title": "sammsung",
+    "image": "https://i.ibb.co/KLD4Bcc/pexels-velroy-fernandes-4048419.jpg",
     "description": "Mark Smith specializes in network administration and ensures the smooth operation of IT infrastructure."
   },
   {
     "id": 3,
-    "name": "Emily Davis",
+    "name": "SONY",
     "title": "Data Analyst",
-    "image": "https://example.com/images/emily.jpg",
+    "image": "https://i.ibb.co/frC8Yhk/pexels-jack-redgate-3069869.jpg",
     "description": "Emily Davis is a data analyst who uncovers valuable insights from data to drive business decisions."
   },
   {
     "id": 4,
-    "name": "James Wilson",
+    "name": "Apple",
     "title": "Cybersecurity Expert",
-    "image": "https://example.com/images/james.jpg",
+    "image": "https://i.ibb.co/G9fwSMN/pexels-ivan-babydov-7789846.jpg",
     "description": "James Wilson is a cybersecurity expert who protects organizations from digital threats and cyberattacks."
   },
   {
     "id": 5,
-    "name": "Sara Brown",
+    "name": "Microsoft",
     "title": "UI/UX Designer",
-    "image": "https://example.com/images/sara.jpg",
+    "image": "https://i.ibb.co/sPHT7jC/pexels-salvatore-de-lellis-9683980.jpg",
     "description": "Sara Brown is a creative UI/UX designer who crafts beautiful and user-friendly interfaces."
   },
   {
     "id": 6,
-    "name": "Michael Lee",
+    "name": "LG",
     "title": "AI Researcher",
-    "image": "https://example.com/images/michael.jpg",
+    "image": "https://i.ibb.co/J3Vw0dC/silver-letter-lg-metal-combination-alphabet-logo-icon-design-with-grey-color-on-black-and-white-grad.jpg",
     "description": "Michael Lee is an AI researcher dedicated to advancing artificial intelligence and machine learning."
   }
 ]

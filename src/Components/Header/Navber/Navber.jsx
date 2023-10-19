@@ -74,7 +74,7 @@ const Navber = () => {
                       alt=""
                     />
                   </span>
-                  <span>Technology</span>
+                  <span>ElectroElegance</span>
                 </h1>
                 <div className="dropdown">
                   <label tabIndex={0} className="btn btn-ghost  lg:hidden">

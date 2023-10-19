@@ -65,7 +65,7 @@ const Register = () => {
                 Swal.fire({
                   icon: "error",
                   title: "Oops...",
-                  text: "Something went wrong!",
+                  text: " register faild Something went wrong!",
                   footer: '<a href="">Why do I have this issue?</a>',
                 })(error);
               });

@@ -1,27 +1,28 @@
-.body{
-    min-height: 100vh;
+.body-setion{
+    min-height: 500px;
     display: grid;
-    place-items: center;
+    margin: auto;
+    width: 95%;
 
 }
 .slider{
     height: 250px;
-    margin: auto;
+   
     position: relative;
-    width: 90%;
-    display: grid;
+    max-width: 0px;
+    display:  flex;
     place-items: center;
 
 }
-.slider-track{
+.slide-track{
     display: flex;
     width: calc(250px * 18);
-    animation: scroll 40% linear infinite;
+  
 
 }
 
-.slider-track:hover{
-    animation-play-state: paused;
+.slide-track:hover{
+    animation-play-state: paused;  
 }
 @keyframes scroll {
     0% {
@@ -42,7 +43,7 @@
 }
 img{
     width: 100%;
-    transition: transfrom 1%;
+    transition: transform 1%;
 }
 img:hover{
     transform:translateZ(20px);
@@ -53,18 +54,17 @@ img:hover{
     content: '';
     height: 100%;
     position: absolute;
-    width: 15%;
+    width: 10%;
     z-index: 2;
 
 }
-.slider::before{
-    left: 0;
+/* .slider::before{
+    left: -250px;
     top: 0;
 
 }
 .slider::after{
-    right: 0;
     top: 0;
-    transform: rotate(100deg);
-
-}
+    right: 0;
+    transform: rotateZ(180deg);
+} */

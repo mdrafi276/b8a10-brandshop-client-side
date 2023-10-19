@@ -22,9 +22,9 @@ const navigate = useNavigate();
 signIn(email, password)
   .then(() => {
    Swal.fire({
-     icon: "error",
-     title: "Oops...",
-     text: "Something went wrong!",
+     icon: "Success",
+     title: "Seccess",
+     text: "Login in successfull !",
      footer: '<a href="">Why do I have this issue?</a>',
    });
     navigate(location?.state ? location.state : "/");
@@ -33,7 +33,7 @@ signIn(email, password)
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: "Something went wrong!",
+      text: "Password dind not match  !",
       footer: '<a href="">Why do I have this issue?</a>',
     })(error);
   });
@@ -44,13 +44,13 @@ const hangleGoogleLogin = () => {
   googleLogin()
     .then(() => {
      Swal.fire({
-       icon: "error",
-       title: "Oops...",
-       text: "Something went wrong!",
+       icon: "Success",
+       title: "সাব্বাস বেটা...",
+       text: "Ligin success !",
        footer: '<a href="">Why do I have this issue?</a>',
      });
     })
-    .catch();
+    .catch()
 };
   return (
     <div className="bg-[#08051A]">

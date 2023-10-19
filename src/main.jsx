@@ -9,7 +9,7 @@ import { AuthProvider } from './Provider/AuthProvider';
 import AddPorducts from './Page/Products/AddPorducts';
 import PrivetRoute from './Provider/PrivetRoute';
 import AllProduct from './Page/AllPorduct/AllProduct';
-import Slider from './Components/Slider/Slider';
+import Samsung from './Components/Samsung/Samsung';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,6 +18,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch("/public/Json/Data.json"),
       },
       {
         path: "/login",
@@ -29,16 +30,28 @@ const router = createBrowserRouter([
       },
       {
         path: "/addPorduct",
-        element: <PrivetRoute><AddPorducts></AddPorducts></PrivetRoute>,
+        element: (
+          <PrivetRoute>
+            <AddPorducts></AddPorducts>
+          </PrivetRoute>
+        ),
       },
       {
-        path:"/allProduct",
-        element: <AllProduct></AllProduct>,
+        path: "/allProduct",
+        element: (
+          <PrivetRoute>
+            {" "}
+            <AllProduct></AllProduct>
+          </PrivetRoute>
+        ),
+
+       
       },
       {
-        path:"/slidr",
-        element: <Slider></Slider>,
-      },
+        path:'/Samsung',
+        element:<Samsung></Samsung>,
+         loader: () => fetch("http://localhost:5000/brand/Samsung"),
+      }
     ],
   },
 ]);
