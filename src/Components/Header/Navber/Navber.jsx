@@ -38,9 +38,9 @@ const Navber = () => {
              className={({ isActive, isLoading }) =>
                isLoading ? "loading" : isActive ? "text-black bg-white hover:text-yellow-300" : ""
              }
-             to="/serviceData/:id"
+             to="/myCart"
            >
-             menu
+             My Cart
            </NavLink>
          </li>
          <li>

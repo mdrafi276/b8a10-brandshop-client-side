@@ -6,7 +6,7 @@ const Catagory = ({ brand }) => {
   return (
     <div>
       <Link to={name}>
-        <div className="card hover:border-2 lg:w-[320px] bg-[#140F2C] w-full text-white cursor-pointer hover:bg-transparent shadow-xl">
+        <div className="card hover:border-2 lg:mb-20 lg:w-[320px] bg-[#140F2C] w-full text-white cursor-pointer hover:bg-transparent shadow-xl">
           <figure className="px-10 pt-10">
             <img src={image} alt="Shoes" className="rounded-xl" />
           </figure>

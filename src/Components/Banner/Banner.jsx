@@ -7,11 +7,12 @@ const Banner = () => {
           <div className="hero-content text-center text-neutral-content">
             <div className="max-w-md  bg-transparent">
               <h1 className="mb-5 text-5xl font-bold  text-white ">
-                Tech Universe Explore Innovate Inspire{" "}
+                Experience the future with our online emporium{" "}
               </h1>
               <p className="mb-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                possimus laborum illo, vero praesentium non.
+                 offering the
+                latest innovations in electronics and technology gadgets. Your
+                ultimate destination for all things high-tech.
               </p>
               <button className="btn text-white hover:text-black backdrop-blur bg-transparent">
                 Get Started

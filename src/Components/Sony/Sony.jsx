@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Navber from "../Header/Navber/Navber";
 
-const Samsung = () => {
+const Sony = () => {
     return (
       <div className="bg-[#010313]">
         <Navber></Navber>
@@ -112,4 +112,4 @@ const Samsung = () => {
     );
 };
 
-export default Samsung;
+export default Sony;

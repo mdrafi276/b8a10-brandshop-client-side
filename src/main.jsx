@@ -10,6 +10,14 @@ import AddPorducts from './Page/Products/AddPorducts';
 import PrivetRoute from './Provider/PrivetRoute';
 import AllProduct from './Page/AllPorduct/AllProduct';
 import Samsung from './Components/Samsung/Samsung';
+import Microsoft from './Components/Microsoft/Microsoft';
+import Apple from './Components/Apple/Apple';
+import Sony from './Components/Sony/Sony';
+import Lg from './Components/Lg/Lg';
+import Google from './Components/Google/Google';
+import Update from './Page/Update/Update';
+import ProductDetails from './Page/Details/ProductDetails';
+import MyCart from './Page/MyCart/MyCart';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -44,13 +52,64 @@ const router = createBrowserRouter([
             <AllProduct></AllProduct>
           </PrivetRoute>
         ),
-
-       
       },
       {
-        path:'/Samsung',
-        element:<Samsung></Samsung>,
-         loader: () => fetch("http://localhost:5000/brand/Samsung"),
+        path: "/Samsung",
+        element: <Samsung></Samsung>,
+        loader: () => fetch("http://localhost:5000/brand/samsung"),
+      },
+      {
+        path: "/microsoft",
+        element: (
+          <PrivetRoute>
+            <Microsoft></Microsoft>
+          </PrivetRoute>
+        ),
+      },
+      {
+        path: "/apple",
+        element: (
+          <PrivetRoute>
+            {" "}
+            <Apple></Apple>
+          </PrivetRoute>
+        ),
+      },
+      {
+        path: "/sony",
+        element: (
+          <PrivetRoute>
+            <Sony></Sony>
+          </PrivetRoute>
+        ),
+      },
+      {
+        path: "/lg",
+        element: (
+          <PrivetRoute>
+            <Lg></Lg>
+          </PrivetRoute>
+        ),
+      },
+      {
+        path: "/google",
+        element: (
+          <PrivetRoute>
+            <Google></Google>
+          </PrivetRoute>
+        ),
+      },
+      {
+        path: "/update",
+        element: <Update></Update>,
+      },
+      {
+        path: "/priductDetails",
+        element: <ProductDetails></ProductDetails>,
+      },
+      {
+        path:"/myCart",
+        element:<MyCart></MyCart>
       }
     ],
   },
