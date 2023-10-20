@@ -1,9 +1,12 @@
 import { Outlet } from 'react-router-dom';
 
+
 const Leyout = () => {
     return (
-        <div>
+        <div> 
+            
             <Outlet></Outlet>
+            
         </div>
     );
 };

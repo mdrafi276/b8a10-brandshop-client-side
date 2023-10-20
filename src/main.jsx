@@ -43,10 +43,14 @@ const router = createBrowserRouter([
           </PrivetRoute>
         ),
       },
-   
+
       {
         path: "/Samsung",
-        element: <Samsung></Samsung>,
+        element: (
+          <PrivetRoute>
+            <Samsung></Samsung>
+          </PrivetRoute>
+        ),
         loader: () => fetch("http://localhost:5000/brand/samsung"),
       },
       {
@@ -56,6 +60,7 @@ const router = createBrowserRouter([
             <Microsoft></Microsoft>
           </PrivetRoute>
         ),
+        loader: () => fetch("http://localhost:5000/brand/microsoft"),
       },
       {
         path: "/apple",
@@ -65,6 +70,7 @@ const router = createBrowserRouter([
             <Apple></Apple>
           </PrivetRoute>
         ),
+        loader: () => fetch("http://localhost:5000/brand/apple"),
       },
       {
         path: "/sony",
@@ -73,6 +79,7 @@ const router = createBrowserRouter([
             <Sony></Sony>
           </PrivetRoute>
         ),
+        loader: () => fetch("http://localhost:5000/brand/sony"),
       },
       {
         path: "/lg",
@@ -81,6 +88,7 @@ const router = createBrowserRouter([
             <Lg></Lg>
           </PrivetRoute>
         ),
+        loader: () => fetch("http://localhost:5000/brand/lg"),
       },
       {
         path: "/google",
@@ -89,19 +97,22 @@ const router = createBrowserRouter([
             <Google></Google>
           </PrivetRoute>
         ),
+        loader: () => fetch("http://localhost:5000/brand/google"),
       },
       {
-        path: "/update",
+        path: "/update/:id",
         element: <Update></Update>,
+        loader: ({params}) =>
+          fetch( `http://localhost:5000/brand/${params.id}`),
       },
       {
         path: "/priductDetails",
         element: <ProductDetails></ProductDetails>,
       },
       {
-        path:"/myCart",
-        element:<MyCart></MyCart>
-      }
+        path: "/myCart",
+        element: <MyCart></MyCart>,
+      },
     ],
   },
 ]);

@@ -1,13 +1,23 @@
-import { Profile, useContext } from "react";
+import {  useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+
+import userDefaultPic from "../../../../src/assets/user.png";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Navber = () => {
 
     const { user, logOut } = useContext(AuthContext);
     console.log(user);
     const handleSignOut = () => {
-      logOut().then()
+      logOut().then(() => {
+        Swal.fire({
+          title: "Success!",
+          text: "Successfully SignOut From Your Account",
+          icon: "success",
+          confirmButtonText: "Cool",
+        });
+      })
       .catch();
     };
 
@@ -116,7 +126,7 @@ const Navber = () => {
                 >
                   <img
                     className="rounded-full "
-                    src={user?.photoURL ? user.photoURL : Profile}
+                    src={user?.photoURL ? user.photoURL : userDefaultPic}
                     alt=""
                   />
                 </label>

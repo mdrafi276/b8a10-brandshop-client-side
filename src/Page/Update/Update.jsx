@@ -1,8 +1,12 @@
 import Swal from "sweetalert2";
 import Navber from "../../Components/Header/Navber/Navber";
+import { useLoaderData, } from "react-router-dom";
 
 
 const Update = () => {
+  const updateData = useLoaderData()
+  console.log(updateData);
+
      const handleUpdate = (e) => {
        e.preventDefault();
        const name = e.target.name.value;
@@ -22,9 +26,9 @@ const Update = () => {
          brandName,
          driscription,
        };
-       console.log(newBrand);
-       fetch("/", {
-         method: "POST",
+      //  console.log(newBrand);
+       fetch(`http://localhost:5000/brand/${updateData._id}`, {
+         method: "PUT",
          headers: {
            "content-type": "application/json",
          },
@@ -33,7 +37,7 @@ const Update = () => {
          .then((res) => res.json())
          .then((data) => {
            console.log(data);
-           if (data.insertedId) {
+           if (data.modifiedCount > 0) {
              Swal.fire({
                icon: "success",
                title: "success",
@@ -49,7 +53,9 @@ const Update = () => {
         {/* Add products prentet container  */}
         <div className="bg-[#150F2D] lg:mt-10 text-white lg:w-[1000px] mx-auto w-full rounded-2xl lg:h-[500px]">
           <div className="text-center text-white ">
-            <h1 className=" text-2xl lg:text-4xl pt-5 lg:pt-10">Update Product</h1>
+            <h1 className=" text-2xl lg:text-4xl pt-5 lg:pt-10">
+              Update Product
+            </h1>
           </div>
           <form onSubmit={handleUpdate}>
             <div className=" text-white grid grid-cols-1 lg:grid-cols-2  lg:mt-10 gap-4 w-full lg:gap-10 lg:ml-5">
@@ -58,6 +64,7 @@ const Update = () => {
                   <input
                     type="text"
                     name="name"
+                    defaultValue={updateData.name}
                     className="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     placeholder="  "
                   />
@@ -72,6 +79,7 @@ const Update = () => {
                   <input
                     type="type"
                     name="type"
+                    defaultValue={updateData.type}
                     className="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     placeholder=" "
                   />
@@ -86,6 +94,7 @@ const Update = () => {
                   <input
                     type="text"
                     name="price"
+                    defaultValue={updateData.price}
                     className="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     placeholder=" "
                   />
@@ -100,6 +109,7 @@ const Update = () => {
                   <input
                     type="text"
                     name="brandName"
+                    defaultValue={updateData.brandName}
                     className="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     placeholder=" "
                   />
@@ -114,6 +124,7 @@ const Update = () => {
                   <input
                     type="text"
                     name="driscription"
+                    defaultValue={updateData.driscription}
                     className="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     placeholder=" "
                   />
@@ -128,6 +139,7 @@ const Update = () => {
                   <input
                     type="text"
                     name="rating"
+                    defaultValue={updateData.rating}
                     className="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     placeholder=" "
                   />
@@ -143,6 +155,7 @@ const Update = () => {
                   <input
                     type="text"
                     name="photo"
+                    defaultValue={updateData.photo}
                     className="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     placeholder=" "
                   />

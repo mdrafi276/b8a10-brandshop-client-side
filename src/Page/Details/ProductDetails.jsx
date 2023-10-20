@@ -36,11 +36,11 @@ const ProductDetails = () => {
                 <p className="text-sm">phone</p>
               </div>
               <div className="flex justify-between items-center gap-2">
-                <Link to="/myCart">
-                  <button className="btn hover:border-2 bg-white text-black  hover:bg-transparent  hover:text-white hover:backdrop-blur-2xl">
+                
+                  <button className="btn hover:border-2 w-full bg-white text-black  hover:bg-transparent  hover:text-white hover:backdrop-blur-2xl">
                     Add To Cart
                   </button>
-                </Link>
+                
               </div>
             </div>
           </div>
