@@ -4,6 +4,8 @@ import Catagory from "../../Components/Caragory/Catagory";
 import Footer from "../../Components/Footer/Footer";
 import Navber from "../../Components/Header/Navber/Navber";
 import Slider from "../../Components/Slider/Slider";
+import ExtraSectin from "../../Components/ExtraSection/ExtraSectin";
+import ExtraTwo from "../../Components/ExtraSection/ExtraTwo";
 
 const Home = () => {
   const brand = useLoaderData();
@@ -32,6 +34,8 @@ const Home = () => {
             <Catagory key={brandData.id} brand={brandData}></Catagory>
           ))}
         </div>
+        <ExtraSectin></ExtraSectin>
+        <ExtraTwo></ExtraTwo>
 
         <div className="lg:block hidden">
           <Slider></Slider>

@@ -1,0 +1,8 @@
+.any-section{
+    
+transition: transform 1%;
+}
+.any-section:hover{
+transform: translateZ(20px);
+cursor: pointer;
+}
