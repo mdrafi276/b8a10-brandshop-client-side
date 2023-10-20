@@ -1,9 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import Navber from "../Header/Navber/Navber";
 
 const Samsung = () => {
+   const {_id} = useParams();
+  const samsungData = useLoaderData();
+  const findSamsung = samsungData.find((item) => item._idid = _id)
+  console.log(findSamsung);
     return (
-      <div className="bg-[#010313]">
+      <div>
+        <div>
+          {
+          findSamsung && (
+           <div className="bg-[#010313]">
         <Navber></Navber>
         <div>
           <div className="carousel w-full h-[600px] -mt-20">
@@ -80,7 +88,7 @@ const Samsung = () => {
           <div className="card  lg:w-[300px] bg-[#140F2C] w-full text-white cursor-pointer hover:bg-transparent shadow-xl hover:border-2">
             <figure className="">
               <img
-                src="https://i.ibb.co/7ttkvQg/business-executives-show-their-approval-by-raising-hands.jpg"
+                src={findSamsung.image}
                 alt="Shoes"
                 className="rounded-xl"
               />
@@ -109,7 +117,13 @@ const Samsung = () => {
             </div>
           </div>
         </div>
+      </div> 
+          )
+          }
+        </div>
+        
       </div>
+      
     );
 };
 

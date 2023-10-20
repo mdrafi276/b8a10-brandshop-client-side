@@ -47,7 +47,7 @@ const router = createBrowserRouter([
       {
         path: "/Samsung",
         element: <Samsung></Samsung>,
-        // loader: () => fetch("http://localhost:5000/brand/samsung"),
+        loader: () => fetch("http://localhost:5000/brand/samsung"),
       },
       {
         path: "/microsoft",
