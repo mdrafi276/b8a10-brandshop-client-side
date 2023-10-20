@@ -70,7 +70,7 @@ const Navber = () => {
                   <span>
                     <img
                       className="w-10 rounded-full"
-                      src="/src/assets/react.svg"
+                      src="https://i.ibb.co/x6ptv69/download-removebg-preview.png"
                       alt=""
                     />
                   </span>

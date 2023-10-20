@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
@@ -8,7 +7,6 @@ import Register from './Page/Register/Register';
 import { AuthProvider } from './Provider/AuthProvider';
 import AddPorducts from './Page/Products/AddPorducts';
 import PrivetRoute from './Provider/PrivetRoute';
-import AllProduct from './Page/AllPorduct/AllProduct';
 import Samsung from './Components/Samsung/Samsung';
 import Microsoft from './Components/Microsoft/Microsoft';
 import Apple from './Components/Apple/Apple';
@@ -18,6 +16,7 @@ import Google from './Components/Google/Google';
 import Update from './Page/Update/Update';
 import ProductDetails from './Page/Details/ProductDetails';
 import MyCart from './Page/MyCart/MyCart';
+import React from 'react';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -44,19 +43,11 @@ const router = createBrowserRouter([
           </PrivetRoute>
         ),
       },
-      {
-        path: "/allProduct",
-        element: (
-          <PrivetRoute>
-            {" "}
-            <AllProduct></AllProduct>
-          </PrivetRoute>
-        ),
-      },
+   
       {
         path: "/Samsung",
         element: <Samsung></Samsung>,
-        loader: () => fetch("http://localhost:5000/brand/samsung"),
+        // loader: () => fetch("http://localhost:5000/brand/samsung"),
       },
       {
         path: "/microsoft",
