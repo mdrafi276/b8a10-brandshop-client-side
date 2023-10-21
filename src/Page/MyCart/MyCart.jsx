@@ -5,6 +5,20 @@ import { AuthContext } from '../../Provider/AuthProvider';
 import CartProduct from '../../Components/cartMap/cartProduct';
 
 const MyCart = () => {
+  const handleDelete = (_id) => {
+    console.log(_id);
+    fetch(`http://localhost:5000/data/${_id}`, {
+      method: "DELETE"
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch(error =>{
+        console.error(error);
+      })
+      
+  };
 const { user } = useContext(AuthContext);
 const userEmail = user.email;
 console.log(userEmail);
@@ -31,7 +45,7 @@ return (
       {product.map((productData) => (
         <CartProduct
           key={productData._id}
-          productData={productData}
+          productData={productData} handleDelete ={handleDelete}
         ></CartProduct>
       ))}
     </div>

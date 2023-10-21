@@ -1,22 +1,10 @@
 
 
-const CartProduct = ({ productData }) => {
+const CartProduct = ({ productData, handleDelete }) => {
     
       const { name, driscription, brandName, photo, _id, rating, type, price } = productData;
   
-const handleDelete = () =>{
-    
-    fetch(`http://localhost:5000/cart/nmnobiata@gmail.com/${_id}`,{
-        method:"DELETE",
-     
-    }
-   
-    )
-    .then(res => res.json())
-    .then(data => {
-        console.log(data);
-    })
-}
+
   return (
     <div>
       <div className="card h-[500px] lg:w-[300px] hover:scale-105 bg-[#140F2C] w-full text-white cursor-pointer htext-white  hover:bg-transparent hover:shadow-sky-400 shadow-[0_0_50px_#00000028] duration-300  hover:border-white border-transparent border-2">
@@ -33,7 +21,7 @@ const handleDelete = () =>{
             <p className="text-sm">{driscription} </p>
           </div>
 
-          <button onClick={handleDelete} className="btn hover:border-2 bg-white text-black w-full  hover:bg-transparent  hover:text-white hover:backdrop-blur-2xl">
+          <button onClick= {() => handleDelete(_id) } className="btn hover:border-2 bg-white text-black w-full  hover:bg-transparent  hover:text-white hover:backdrop-blur-2xl">
             delete
           </button>
         </div>
