@@ -14,10 +14,10 @@ const ExtraSectin = () => {
                   />
 
                   <p className="leading-relaxed">
-                    Edison bulb retro cloud bread echo park, helvetica stumptown
-                    taiyaki taxidermy 90 s cronut +1 kinfolk. Single-origin
-                    coffee ennui shaman taiyaki vape DIY tote bag drinking
-                    vinegar cronut adaptogen squid fanny pack vaporware.
+                    Holden Caulfield, a fictional character created by J.D.
+                    Salinger in The Catcher in the Rye is a disillusioned
+                    teenager, while a Senior Product Designer designs and
+                    improves product functionality and aesthetics
                   </p>
                   <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
                   <h2 className=" text-[#AE42EB] font-medium title-font tracking-wider text-sm">
@@ -34,10 +34,10 @@ const ExtraSectin = () => {
                     alt=""
                   />
                   <p className="leading-relaxed">
-                    Edison bulb retro cloud bread echo park, helvetica stumptown
-                    taiyaki taxidermy 90 s cronut +1 kinfolk. Single-origin
-                    coffee ennui shaman taiyaki vape DIY tote bag drinking
-                    vinegar cronut adaptogen squid fanny pack vaporware.
+                    Alper Kamu, a real individual, is a recognized UI Developer.
+                    They specialize in crafting user interfaces, enhancing user
+                    experiences, and designing web and software contributing to
+                    a seamless digital world
                   </p>
                   <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
                   <h2 className="text-[#9A3AD1] font-medium title-font tracking-wider text-sm">
@@ -54,10 +54,10 @@ const ExtraSectin = () => {
                     alt=""
                   />
                   <p className="leading-relaxed">
-                    Edison bulb retro cloud bread echo park, helvetica stumptown
-                    taiyaki taxidermy 90 s cronut +1 kinfolk. Single-origin
-                    coffee ennui shaman taiyaki vape DIY tote bag drinking
-                    vinegar cronut adaptogen squid fanny pack vaporware.
+                    Henry Letham, a real person, serves as a Chief Technology
+                    Officer (CTO). In this role, he leads technological
+                    strategies and innovations, ensuring a company s
+                    technological growth and success in the digital landscape
                   </p>
                   <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
                   <h2 className="text-[#AE42EB] font-medium title-font tracking-wider text-sm">

@@ -94,14 +94,14 @@ const Apple = () => {
             </div>
           </Link>
         </div>
-        <div className="grid w-full lg:grid-cols-3 pb-5 md:pb-20  duration-300 ease-in-out hover:scale-120   grid-cols-1  md:grid-cols-3  lg:w-[80%] gap-8 mx-auto md:mt-5 mt-4 lg:mt-14">
+        <div className="grid w-full  lg:grid-cols-3 pb-5 md:pb-20  duration-300 ease-in-out hover:scale-120   grid-cols-1  md:grid-cols-3  lg:w-[80%] gap-8 mx-auto md:mt-5 mt-4 lg:mt-14">
           {samsungData.map((samsungCard) => {
             return (
               <div
                 key={samsungCard._id}
-                className="card  lg:w-[300px] bg-[#140F2C] w-full text-white cursor-pointer hover:bg-transparent shadow-xl hover:border-2"
+                className="card  lg:w-[300px] h-[500px]  bg-[#140F2C] w-full text-white cursor-pointer hover:bg-transparent  hover:shadow-sky-400 shadow-[0_0_50px_#00000028] duration-300  hover:scale-105 "
               >
-                <figure className="">
+                <figure className="w-full md:h-[600px] bg-cover  md:p-0">
                   <img
                     src={samsungCard.photo}
                     alt="Shoes"
@@ -115,14 +115,15 @@ const Apple = () => {
                     <p className="text-sm">Price:{samsungCard.price} $</p>
                     <p className="text-sm">Rating: {samsungCard.rating} </p>
                     <p className="text-sm">type :{samsungCard.type} </p>
+                    <p className="text-sm">type :{samsungCard.driscription} </p>
                   </div>
                   <div className="flex justify-between   items-center gap-2">
-                    <Link to="/priductDetails">
+                    <Link to={`/productDetails/${samsungCard._id}`}>
                       <button className="btn  hover:border-2 bg-white text-black  hover:bg-transparent  hover:text-white hover:backdrop-blur-2xl">
                         See mo..
                       </button>
                     </Link>
-                    <Link to="/update">
+                    <Link to={`/update/${samsungCard._id}`}>
                       <button className="btn  hover:border-2 bg-white text-black  hover:bg-transparent  hover:text-white hover:backdrop-blur-2xl">
                         Update
                       </button>

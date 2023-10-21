@@ -1,52 +1,68 @@
-import { Link } from "react-router-dom";
+import {  useLoaderData } from "react-router-dom";
 import Navber from "../../Components/Header/Navber/Navber";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const ProductDetails = () => {
-    return (
-      <div className="bg-[#010313] md:h-[700px] ">
-        <Navber></Navber>
-        <div>
-          <div className="text-center  md:mt-1  mt-1 lg:mt-1">
-            <h1 className="text-4xl font-bold text-white">Add Product</h1>
-            <Link to="/addPorduct">
-              <div className="mt-4 ">
-                <button className="btn hover:border-2 bg-white text-black  hover:bg-transparent  hover:text-white hover:backdrop-blur-2xl">
-                  Add Porduct
-                </button>
-              </div>
-            </Link>
-          </div>
-        </div>
-        <div className="lg:w-[23%] mx-auto mt-10 ">
-          <div className="card  lg:w-[300px] bg-[#140F2C] w-full text-white cursor-pointer hover:bg-transparent shadow-xl hover:border-2">
-            <figure className="">
-              <img
-                src="https://i.ibb.co/7ttkvQg/business-executives-show-their-approval-by-raising-hands.jpg"
-                alt="Shoes"
-                className="rounded-xl"
-              />
-            </figure>
-            <div className="card-body   ">
-              <h2 className="">Gaaxy s23</h2>
-              <div className="">
-                <p className="text-sm">Lorem ipsum dolor sit amet. </p>
-                <p className="text-sm">Sumsung</p>
-                <p className="text-sm"> 1212 $ </p>
-                <p className="text-sm">Rating : </p>
-                <p className="text-sm">phone</p>
-              </div>
-              <div className="flex justify-between items-center gap-2">
-                
-                  <button className="btn hover:border-2 w-full bg-white text-black  hover:bg-transparent  hover:text-white hover:backdrop-blur-2xl">
-                    Add To Cart
-                  </button>
-                
-              </div>
+  const detailsData = useLoaderData();
+
+  const { name, driscription, brandName, photo, _id, rating, type, price } =
+    detailsData;
+ const {user} = useContext(AuthContext)
+ const userEmail = (user.email);
+ const cartData = { name, driscription, brandName, photo, _id, rating, type, price , userEmail }
+ console.log(cartData);
+  const handleAddToCart = () =>{
+   
+
+fetch(`http://localhost:5000/cart/`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(cartData)
+        })
+            .then(res => res.json())
+            .then(data => {
+
+                if (data.acknowledged) {
+                   
+                    console.log(data)
+                }
+            })
+    
+    
+  }
+
+  
+  return (
+    <div className="bg-[#010313] w-full lg:h-[700px] ">
+      <Navber></Navber>
+
+      <div className=" flex justify-center items-center mt-5 md:mt-20 ">
+        <div className="card  hover:scale-105 lg:w-[400px] h-[500px] bg-[#140F2C] w-full text-white cursor-pointer hover:bg-transparent hover:shadow-sky-400 shadow-[0_0_50px_#00000028] duration-300  hover:border-white border-transparent border-2">
+          <figure className="w-full h-[350px] md:p-10 ">
+            <img src={photo} alt="Shoes" className="rounded-xl" />
+          </figure>
+          <div className="card-body   ">
+            <h2 className="">{name}</h2>
+            <div className="">
+              <p className="text-sm">{brandName} </p>
+              <p className="text-sm">{}</p>
+              <p className="text-sm"> {price} $ </p>
+              <p className="text-sm">ratting</p>
+              <p className="text-sm">{type}</p>
+              <p className="text-sm">{driscription}</p>
             </div>
+
+            <button onClick={handleAddToCart} className="btn hover:border-2 w-full bg-white text-black  hover:bg-transparent  hover:text-white hover:backdrop-blur-2xl">
+              Add To Cart
+            </button>
           </div>
         </div>
       </div>
-    );
+    </div>
+  );
 };
 
 export default ProductDetails;

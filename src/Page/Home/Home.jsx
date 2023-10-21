@@ -6,6 +6,8 @@ import Navber from "../../Components/Header/Navber/Navber";
 import Slider from "../../Components/Slider/Slider";
 import ExtraSectin from "../../Components/ExtraSection/ExtraSectin";
 import ExtraTwo from "../../Components/ExtraSection/ExtraTwo";
+import ExtraThree from "../../Components/ExtraSection/ExtraThree";
+import Meet from "../../Components/ExtraSection/Meet";
 
 const Home = () => {
   const brand = useLoaderData();
@@ -36,10 +38,12 @@ const Home = () => {
         </div>
         <ExtraSectin></ExtraSectin>
         <ExtraTwo></ExtraTwo>
-
+        <Meet></Meet>
         <div className="lg:block hidden">
           <Slider></Slider>
         </div>
+        <ExtraThree></ExtraThree>
+        
         <Footer></Footer>
       </div>
     ); 

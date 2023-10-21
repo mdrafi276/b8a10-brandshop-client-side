@@ -98,9 +98,9 @@ const Sony = () => {
             return (
               <div
                 key={samsungCard._id}
-                className="card  lg:w-[300px] bg-[#140F2C] w-full text-white cursor-pointer hover:bg-transparent shadow-xl hover:border-2"
+                className="card  lg:w-[300px] h-[500px] hover:scale-105 bg-[#140F2C] w-full text-white cursor-pointer hover:bg-transparent  hover:shadow-sky-400 shadow-[0_0_50px_#00000028] duration-300  "
               >
-                <figure className="">
+                <figure className="w-full md:h-[600px] bg-cover  md:p-5">
                   <img
                     src={samsungCard.photo}
                     alt="Shoes"
@@ -114,14 +114,15 @@ const Sony = () => {
                     <p className="text-sm">Price:{samsungCard.price} $</p>
                     <p className="text-sm">Rating: {samsungCard.rating} </p>
                     <p className="text-sm">type :{samsungCard.type} </p>
+                    <p className="text-sm">type :{samsungCard.driscription} </p>
                   </div>
                   <div className="flex justify-between   items-center gap-2">
-                    <Link to="/priductDetails">
+                    <Link to={`/productDetails/${samsungCard._id}`}>
                       <button className="btn  hover:border-2 bg-white text-black  hover:bg-transparent  hover:text-white hover:backdrop-blur-2xl">
                         See mo..
                       </button>
                     </Link>
-                    <Link to="/update">
+                    <Link to={`/update/${samsungCard._id}`}>
                       <button className="btn  hover:border-2 bg-white text-black  hover:bg-transparent  hover:text-white hover:backdrop-blur-2xl">
                         Update
                       </button>
