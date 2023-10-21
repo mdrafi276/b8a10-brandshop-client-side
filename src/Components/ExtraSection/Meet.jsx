@@ -3,11 +3,11 @@ const Meet = () => {
     return (
       <div>
         <div className="flex items-center justify-center lg:mb-32  md:mb-16  mb-14 text-center">
-          <div className="flex flex-col p-2 m-2 ">
+          <div className="flex flex-col p-2 m-2  ">
             <div className="text-3xl text-[#9438CA] md:mt-2 font-medium">
               Meet Our Team
             </div>
-            <div className="text-sm mx-2 md:text-xl text-[#DDA7FA]">
+            <div className="text-sm mx-2 md:text-xl mr-[3.5rem] md:mr-0 text-[#DDA7FA]">
               Meet the team member who have contributed their designs for this
               websites.
             </div>

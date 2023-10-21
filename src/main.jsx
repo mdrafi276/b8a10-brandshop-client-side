@@ -46,73 +46,63 @@ const router = createBrowserRouter([
 
       {
         path: "/Samsung",
-        element: (
-          <PrivetRoute>
-            <Samsung></Samsung>
-          </PrivetRoute>
-        ),
+        element: <Samsung></Samsung>,
         loader: () => fetch("http://localhost:5000/brand/samsung"),
       },
       {
         path: "/microsoft",
-        element: (
-          <PrivetRoute>
-            <Microsoft></Microsoft>
-          </PrivetRoute>
-        ),
+        element: <Microsoft></Microsoft>,
+
         loader: () => fetch("http://localhost:5000/brand/microsoft"),
       },
       {
         path: "/apple",
-        element: (
-          <PrivetRoute>
-            {" "}
-            <Apple></Apple>
-          </PrivetRoute>
-        ),
+        element: <Apple></Apple>,
+
         loader: () => fetch("http://localhost:5000/brand/apple"),
       },
       {
         path: "/sony",
-        element: (
-          <PrivetRoute>
-            <Sony></Sony>
-          </PrivetRoute>
-        ),
+        element: <Sony></Sony>,
         loader: () => fetch("http://localhost:5000/brand/sony"),
       },
       {
         path: "/lg",
-        element: (
-          <PrivetRoute>
-            <Lg></Lg>
-          </PrivetRoute>
-        ),
+        element: <Lg></Lg>,
         loader: () => fetch("http://localhost:5000/brand/lg"),
       },
       {
         path: "/google",
-        element: (
-          <PrivetRoute>
-            <Google></Google>
-          </PrivetRoute>
-        ),
+        element: <Google></Google>,
         loader: () => fetch("http://localhost:5000/brand/google"),
       },
       {
         path: "/update/:id",
-        element: <Update></Update>,
+        element: (
+          <PrivetRoute>
+            <Update></Update>
+          </PrivetRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/brand/${params.id}`),
       },
       {
         path: "/productDetails/:id",
-        element: <ProductDetails></ProductDetails>,
-        loader: ({params}) => fetch(`http://localhost:5000/brand/${params.id}`),
+        element: (
+          <PrivetRoute>
+            <ProductDetails></ProductDetails>
+          </PrivetRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/brand/${params.id}`),
       },
       {
         path: "/myCart",
-        element: <MyCart></MyCart>,
+        element: (
+          <PrivetRoute>
+            <MyCart></MyCart>
+          </PrivetRoute>
+        ),
       },
     ],
   },

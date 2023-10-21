@@ -2,6 +2,7 @@ import {  useLoaderData } from "react-router-dom";
 import Navber from "../../Components/Header/Navber/Navber";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const ProductDetails = () => {
   const detailsData = useLoaderData();
@@ -27,7 +28,12 @@ fetch(`http://localhost:5000/cart/`, {
 
                 if (data.acknowledged) {
                    
-                    console.log(data)
+                    Swal.fire({
+                      icon: "success",
+                      title: "success",
+                      text: "Add success!",
+                      footer: '<a href="">Why do I have this issue?</a>',
+                    })(data)
                 }
             })
     
