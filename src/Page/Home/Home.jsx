@@ -8,6 +8,9 @@ import ExtraSectin from "../../Components/ExtraSection/ExtraSectin";
 import ExtraTwo from "../../Components/ExtraSection/ExtraTwo";
 import ExtraThree from "../../Components/ExtraSection/ExtraThree";
 import Meet from "../../Components/ExtraSection/Meet";
+import ExtraBook from "../../Components/ExtraSection/ExtraBook";
+import ExtraMap from "../../Components/ExtraSection/ExtraMap";
+import ExtraContract from "../../Components/ExtraSection/ExtraContract.";
 
 const Home = () => {
   const brand = useLoaderData();
@@ -29,7 +32,9 @@ const Home = () => {
           </h1>
         </div>
         <div className="text-center mt-5 md:mt-10 ">
-          <h1 className=" md:text-4xl text-2xl lg:text-5xl font-bold text-[#CFA0F1]">BRAND</h1>
+          <h1 className=" md:text-4xl text-2xl lg:text-5xl font-bold text-[#CFA0F1]">
+            BRAND
+          </h1>
         </div>
         <div className="grid w-full lg:grid-cols-3 duration-300 ease-in-out hover:scale-120 lg:w-[80%]  mb-20 grid-cols-1  gap-8 mx-auto mt-20">
           {brand.map((brandData) => (
@@ -38,12 +43,16 @@ const Home = () => {
         </div>
         <ExtraSectin></ExtraSectin>
         <ExtraTwo></ExtraTwo>
+        <ExtraMap></ExtraMap>
         <Meet></Meet>
+        <ExtraContract></ExtraContract>
         <div className="lg:block hidden">
           <Slider></Slider>
         </div>
         <ExtraThree></ExtraThree>
-        
+
+        <ExtraBook></ExtraBook>
+
         <Footer></Footer>
       </div>
     ); 

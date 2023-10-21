@@ -2,7 +2,7 @@
 const Meet = () => {
     return (
       <div>
-        <div className="flex items-center justify-center lg:mb-32  md:mb-16  mb-14 text-center">
+        <div className="flex items-center justify-center lg:mb-32 md:mt-32 mt-6 lg:mt-52  md:mb-16  mb-14 text-center">
           <div className="flex flex-col p-2 m-2  ">
             <div className="text-3xl text-[#9438CA] md:mt-2 font-medium">
               Meet Our Team
@@ -46,8 +46,8 @@ const Meet = () => {
                     Executive Producer
                   </div>
                 </div>
-                <div className="flex-col px-6 py-2   hover:scale-105   hover:shadow-sky-400 shadow-[0_0_50px_#00000028] duration-300">
-                  <div className="md:h-40 h-28 w-28 md:w-40 rounded-full overflow-hidden bg-gray-200">
+                <div className="flex-col px-6 py-2   ">
+                  <div className="md:h-40 h-28 w-28 md:w-40 hover:scale-105   hover:shadow-sky-400 shadow-[0_0_50px_#00000028] duration-300 rounded-full overflow-hidden bg-gray-200">
                     <img
                       src="https://source.unsplash.com/300x300/?girl"
                       alt=""
@@ -55,7 +55,7 @@ const Meet = () => {
                     />
                   </div>
 
-                  <div className="text-lg font-medium text-[#DDA7FA] cursor-pointer hover:text-[]#ff">
+                  <div className="text-lg font-medium text-[#DDA7FA] cursor-pointer hover:text-[#ff]">
                     Elina Gilbert
                   </div>
                   <div className=" italic text-[#DDA7FA]">HR</div>

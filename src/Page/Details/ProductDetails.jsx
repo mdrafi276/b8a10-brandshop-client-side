@@ -1,4 +1,4 @@
-import {  useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import Navber from "../../Components/Header/Navber/Navber";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
@@ -9,38 +9,41 @@ const ProductDetails = () => {
 
   const { name, driscription, brandName, photo, _id, rating, type, price } =
     detailsData;
- const {user} = useContext(AuthContext)
- const userEmail = (user.email);
- const cartData = { name, driscription, brandName, photo, _id, rating, type, price , userEmail }
- console.log(cartData);
-  const handleAddToCart = () =>{
-   
+  const { user } = useContext(AuthContext);
+  const userEmail = user.email;
+  const cartData = {
+    name,
+    driscription,
+    brandName,
+    photo,
+    _id,
+    rating,
+    type,
+    price,
+    userEmail,
+  };
+  console.log(cartData);
+  const handleAddToCart = () => {
+    fetch(`http://localhost:5000/cart/`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(cartData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.acknowledged) {
+          Swal.fire({
+            icon: "success",
+            title: "success",
+            text: "Add success!",
+            footer: '<a href="">Why do I have this issue?</a>',
+          })(data);
+        }
+      });
+  };
 
-fetch(`http://localhost:5000/cart/`, {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(cartData)
-        })
-            .then(res => res.json())
-            .then(data => {
-
-                if (data.acknowledged) {
-                   
-                    Swal.fire({
-                      icon: "success",
-                      title: "success",
-                      text: "Add success!",
-                      footer: '<a href="">Why do I have this issue?</a>',
-                    })(data)
-                }
-            })
-    
-    
-  }
-
-  
   return (
     <div className="bg-[#010313] w-full lg:h-[700px] ">
       <Navber></Navber>
@@ -61,7 +64,10 @@ fetch(`http://localhost:5000/cart/`, {
               <p className="text-sm">{driscription}</p>
             </div>
 
-            <button onClick={handleAddToCart} className="btn hover:border-2 w-full bg-white text-black  hover:bg-transparent  hover:text-white hover:backdrop-blur-2xl">
+            <button
+              onClick={handleAddToCart}
+              className="btn hover:border-2 w-full bg-white text-black  hover:bg-transparent  hover:text-white hover:backdrop-blur-2xl"
+            >
               Add To Cart
             </button>
           </div>
