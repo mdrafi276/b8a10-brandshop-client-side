@@ -2,7 +2,7 @@
 const Meet = () => {
     return (
       <div>
-        <div className="flex items-center justify-center lg:mb-32 md:mt-32 mt-6 lg:mt-52  md:mb-16  mb-14 text-center">
+        <div className="flex items-center md:block  hidden justify-center lg:mb-32 md:mt-32 mt-6 lg:mt-52  md:mb-16  mb-14 text-center">
           <div className="flex flex-col p-2 m-2  ">
             <div className="text-3xl text-[#9438CA] md:mt-2 font-medium">
               Meet Our Team
