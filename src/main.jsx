@@ -46,35 +46,80 @@ const router = createBrowserRouter([
 
       {
         path: "/Samsung",
-        element: <Samsung></Samsung>,
-        loader: () => fetch("http://localhost:5000/brand/samsung"),
+        element: (
+          <PrivetRoute>
+            {" "}
+            <Samsung></Samsung>
+          </PrivetRoute>
+        ),
+        loader: () =>
+          fetch(
+            "https://b8a10-brandshop-server-side-mdrafi276.vercel.app/brand/Samsung"
+          ),
       },
       {
         path: "/microsoft",
-        element: <Microsoft></Microsoft>,
+        element: (
+          <PrivetRoute>
+            <Microsoft></Microsoft>
+          </PrivetRoute>
+        ),
 
-        loader: () => fetch("http://localhost:5000/brand/microsoft"),
+        loader: () =>
+          fetch(
+            "https://b8a10-brandshop-server-side-mdrafi276.vercel.app/brand/microsoft"
+          ),
       },
       {
         path: "/apple",
-        element: <Apple></Apple>,
+        element: (
+          <PrivetRoute>
+            {" "}
+            <Apple></Apple>
+          </PrivetRoute>
+        ),
 
-        loader: () => fetch("http://localhost:5000/brand/apple"),
+        loader: () =>
+          fetch(
+            "https://b8a10-brandshop-server-side-mdrafi276.vercel.app/brand/apple"
+          ),
       },
       {
         path: "/sony",
-        element: <Sony></Sony>,
-        loader: () => fetch("http://localhost:5000/brand/sony"),
+        element: (
+          <PrivetRoute>
+            <Sony></Sony>
+          </PrivetRoute>
+        ),
+        loader: () =>
+          fetch(
+            "https://b8a10-brandshop-server-side-mdrafi276.vercel.app/brand/sony"
+          ),
       },
       {
         path: "/lg",
-        element: <Lg></Lg>,
-        loader: () => fetch("http://localhost:5000/brand/lg"),
+        element: (
+          <PrivetRoute>
+            <Lg></Lg>
+          </PrivetRoute>
+        ),
+        loader: () =>
+          fetch(
+            "https://b8a10-brandshop-server-side-mdrafi276.vercel.app/brand/lg"
+          ),
       },
       {
         path: "/google",
-        element: <Google></Google>,
-        loader: () => fetch("http://localhost:5000/brand/google"),
+        element: (
+          <PrivetRoute>
+            {" "}
+            <Google></Google>
+          </PrivetRoute>
+        ),
+        loader: () =>
+          fetch(
+            "https://b8a10-brandshop-server-side-mdrafi276.vercel.app/brand/google"
+          ),
       },
       {
         path: "/update/:id",
@@ -84,7 +129,9 @@ const router = createBrowserRouter([
           </PrivetRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/brand/${params.id}`),
+          fetch(
+            `https://b8a10-brandshop-server-side-mdrafi276.vercel.app/brand/${params.id}`
+          ),
       },
       {
         path: "/productDetails/:id",
@@ -94,7 +141,9 @@ const router = createBrowserRouter([
           </PrivetRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/brand/${params.id}`),
+          fetch(
+            `https://b8a10-brandshop-server-side-mdrafi276.vercel.app/brand/${params.id}`
+          ),
       },
       {
         path: "/myCart",

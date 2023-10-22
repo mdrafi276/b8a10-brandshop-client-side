@@ -115,6 +115,7 @@ const Navber = () => {
                 <ul className="menu menu-horizontal px-1">{navLink}</ul>
               </div>
               <div className="navbar-end ">
+                <p>hello</p>
                 {user && (
                   <p className="md:mr-5 text-[10px] md:text-[12px] lg:text-[15px] font-bold">
                     {user.displayName}

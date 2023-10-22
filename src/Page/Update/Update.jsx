@@ -26,13 +26,16 @@ const Update = () => {
       driscription,
     };
     //  console.log(newBrand);
-    fetch(`http://localhost:5000/brand/${updateData._id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newBrand),
-    })
+    fetch(
+      `https://b8a10-brandshop-server-side-mdrafi276.vercel.app/brand/${updateData._id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newBrand),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

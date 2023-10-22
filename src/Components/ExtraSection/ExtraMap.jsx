@@ -3,7 +3,7 @@
 const ExtraMap = () => {
     return (
       <div className="md:block hidden">
-        <div className="flex justify-center ">
+        <div className="flex justify-center  ">
           <div className="flex md:flex-row flex-col justify-center  max-w-7xl m-4 ">
             <div className="lg:w-1/2 bg-black ">
               <div className="flex justify-center flex-col items-center">

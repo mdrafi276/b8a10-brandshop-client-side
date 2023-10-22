@@ -22,7 +22,7 @@ const AddPorducts = () => {
       driscription,
     };
     console.log(newBrand);
-    fetch("http://localhost:5000/brand", {
+    fetch("https://b8a10-brandshop-server-side-mdrafi276.vercel.app/brand", {
       method: "POST",
       headers: {
         "content-type": "application/json",

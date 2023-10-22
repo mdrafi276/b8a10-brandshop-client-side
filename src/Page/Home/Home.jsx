@@ -14,6 +14,7 @@ import ExtraContract from "../../Components/ExtraSection/ExtraContract.";
 
 const Home = () => {
   const brand = useLoaderData();
+  console.log(brand);
   
     return (
       <div className="bg-[#010313] ">
@@ -39,7 +40,9 @@ const Home = () => {
         <div className="grid w-full lg:grid-cols-3 duration-300 ease-in-out hover:scale-120 lg:w-[80%]  mb-20 grid-cols-1  gap-8 mx-auto mt-20">
           {brand.map((brandData) => (
             <Catagory key={brandData.id} brand={brandData}></Catagory>
+           
           ))}
+          
         </div>
         <ExtraSectin></ExtraSectin>
         <ExtraTwo></ExtraTwo>

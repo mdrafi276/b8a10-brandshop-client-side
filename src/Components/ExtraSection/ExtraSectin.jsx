@@ -2,7 +2,7 @@ import './ExtraSectom.css'
 const ExtraSectin = () => {
     return (
       <div>
-        <div className=" body-font text-[#E1AAFF] mb-6 md:mb-20">
+        <div className=" body-font text-[#E1AAFF] mb-2 md:mb-20">
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-wrap -m-4">
               <div className="lg:w-1/3 any-section lg:mb-0 mb-6 p-4">

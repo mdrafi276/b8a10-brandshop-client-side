@@ -24,7 +24,7 @@ const ProductDetails = () => {
   };
   console.log(cartData);
   const handleAddToCart = () => {
-    fetch(`http://localhost:5000/cart/`, {
+    fetch(`https://b8a10-brandshop-server-side-mdrafi276.vercel.app/cart/`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

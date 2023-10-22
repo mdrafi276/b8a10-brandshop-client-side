@@ -3,9 +3,9 @@ const ExtraThree = () => {
     return (
       <div>
         <div className="flex justify-center  ">
-          <nav className="self-center w-full max-w-7xl  "></nav>
+          <nav className="self-center w-full md:max-w-7xl  "></nav>
         </div>
-        <div className="flex justify-center  md:mb-20 lg:32 mb-10  ">
+        <div className="flex justify-center  md:mb-20 lg:32 mb-2  ">
           <div className="flex flex-col items-center justify-center">
             <div className="flex flex-col  max-w-7xl justify-center items-center space-y-3 w-full ">
               <div className="flex flex-col  mb-5 md:mb-20  md:items-start items-center justify-center  space-y-3 px-8 text-center ">

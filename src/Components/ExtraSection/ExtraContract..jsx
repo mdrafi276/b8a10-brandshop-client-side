@@ -3,7 +3,7 @@
 const ExtraContract = () => {
     return (
       <div>
-        <div className="flex justify-center md:mb-32 mb-10 lg:mb-52 ">
+        <div className="flex justify-center md:mb-32 mb-2 lg:mb-52 ">
           <div className="flex flex-col justify-center  my-10 w-[90%]  max-w-7xl  ">
             <div className="flex flex-col  justify-center items-center md:items-start  my-6">
               <div className="text-xl md:text-3xl text-[#8231B3] font-bold uppercase">

@@ -41,7 +41,7 @@ const ExtraTwo = () => {
               </p>
               <div className="flex text-black">
                 <Link to="https://play.google.com/store/games?hl=en&gl=US&pli=1">
-                  <button className="bg-white hover:bg-transparent hover:text-white hover:border-2 inline-flex py-2 md:py-3 px-4 md:px-5 rounded-lg items-center focus:outline-none">
+                  <button className="bg-white hover:bg-transparent hover:text-white hover:border-2 inline-flex py-2 md:py-3 px-2 w-full md:px-5 rounded-lg items-center focus:outline-none">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
@@ -62,7 +62,7 @@ const ExtraTwo = () => {
                 </Link>
 
                 <Link to="https://www.apple.com/store">
-                  <button className="bg-white hover:bg-transparent hover:text-white hover:border-2  inline-flex py-2 md:py-3 px-4 md:px-5 rounded-lg items-center ml-4  focus:outline-none">
+                  <button className="bg-white hover:bg-transparent hover:text-white hover:border-2  inline-flex py-2 md:py-3 px-2 md:px-5 rounded-lg items-center ml-4  focus:outline-none">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
@@ -73,7 +73,7 @@ const ExtraTwo = () => {
                       <path d="M212.1 0c-15.76.64-34.67 10.35-45.97 23.58-9.6 11.13-19 29.68-16.52 48.38a2.5 2.5 0 002.29 2.17c1.06.08 2.15.12 3.23.12 15.41 0 32.04-8.52 43.4-22.25 11.94-14.5 17.99-33.1 16.16-49.77A2.52 2.52 0 00212.1 0z"></path>
                     </svg>
                     <span className="ml-4 flex items-start flex-col leading-none">
-                      <span className="text-xs text-gray-400 hover:text-white mb-1">
+                      <span className="text-xs   text-gray-400 hover:text-white mb-1">
                         Download on the
                       </span>
                       <span className="title-font font-medium">App Store</span>

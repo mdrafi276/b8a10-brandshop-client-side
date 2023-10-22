@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer";
 
 const Samsung = () => {
   const samsungData = useLoaderData();
-  // console.log(samsungData);
+  console.log(samsungData);
   
   
     return (
@@ -105,7 +105,7 @@ const Samsung = () => {
               return (
                 <div
                   key={samsungCard._id}
-                  className="card h-[500px] lg:w-[300px] hover:scale-105 bg-[#140F2C] w-full text-white cursor-pointer hover:bg-transparent shadow-xl hover:border-2"
+                  className="card h-[500px] lg:w-[300px]  hover:shadow-sky-400 shadow-[0_0_50px_#00000028] duration-300    bg-[#140F2C] w-full text-white cursor-pointer hover:bg-transparent hover:border-2"
                 >
                   <figure className=" w-full h-[500px] bg-cover  md:p-10">
                     <img

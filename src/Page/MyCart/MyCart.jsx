@@ -3,34 +3,57 @@ import Navber from "../../Components/Header/Navber/Navber";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import CartProduct from "../../Components/cartMap/cartProduct";
+import Swal from "sweetalert2";
 
 const MyCart = () => {
   const handleDelete = (_id) => {
     console.log(_id);
-    fetch(`http://localhost:5000/data/${_id}`, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        
+       fetch(
+         `https://b8a10-brandshop-server-side-mdrafi276.vercel.app/data/${_id}`,
+         {
+           method: "DELETE",
+         }
+       )
+         .then((res) => res.json())
+         .then((data) => {
+           console.log(data);
+           if (data.deletedCount > 0) {
+             Swal.fire("Deleted!", "Your product has been deleted.", "success");
+           }
+         })
+         .catch((error) => {
+           console.error(error);
+         });
+      }
+    });
+   
   };
   const { user } = useContext(AuthContext);
   const userEmail = user.email;
   console.log(userEmail);
   const [product, setProduct] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/cart/${userEmail}`)
+    fetch(
+      `https://b8a10-brandshop-server-side-mdrafi276.vercel.app/cart/${userEmail}`
+    )
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [userEmail]);
   return (
     <div className="bg-[#010313] h-[100%]">
       <Navber></Navber>
-      <div className="text-center  md:mt-8  mt-2 lg:mt-16">
+      <div className="text-center   md:mt-8  mt-2 lg:mt-16">
         <h1 className="text-4xl font-bold text-white">All Product</h1>
         <Link to="/addPorduct">
           <div className="mt-4 ">

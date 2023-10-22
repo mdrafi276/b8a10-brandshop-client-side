@@ -7,7 +7,7 @@ const ExtraBook = () => {
           <div className="flex-col items-center justify-center text-[#8231B3] text-center">
             <div className="flex items-center justify-center">
               <div className="h-36 w-[90%] flex items-center lg:pb-20 justify-center md:text-4xl text-2xl lg:text-5xl font-bold ">
-                Tailblocks is the best website for Tailwind CSS Blocks
+                WELCOME TO GADGETGLADE SUPPORT. WE'RE HERE TO HELP.
               </div>
             </div>
 
@@ -19,10 +19,10 @@ const ExtraBook = () => {
                       98%
                     </div>
                     <div className="text-md mt-8 font-bold text-[#C293DE]">
-                      Tailblocks has gained 98% users this year
+                      ALWAYS ON YOUR SIDE WHEN YOU NEED HELP
                     </div>
                     <div className="text-xs font-medium text-[#C293DE]">
-                      Tailblocks has more than 15k+ visitors per month.
+                      giving out customer the product as soon as possible.
                     </div>
                   </div>
                 </div>
@@ -32,11 +32,11 @@ const ExtraBook = () => {
                       128%
                     </div>
                     <div className="text-md mt-8 font-bold text-[#C293DE]">
-                      Tailblocks has 128% new impressions this year
+                      So the customer 180% can you products without worry.
                     </div>
                     <div className="text-xs font-medium text-[#C293DE]">
-                      Tailblocks has more than 15k+ visitors per month.
-                    </div>
+                      Fast Delivery service than 15k+ visitors per month.
+                  </div>
                   </div>
                 </div>
               </div>
