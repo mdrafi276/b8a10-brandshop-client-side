@@ -11,11 +11,11 @@ const ExtraTwo = () => {
               src="https://i.ibb.co/qmyV95T/pexels-lucie-liz-3165335.jpg"
               alt=""
             />
-            <div className="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">
-              <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-[#9C77B7]">
+            <div className="w-full md:w-2/3 flex flex-col mb-16 dark:text-black items-center text-center">
+              <h1 className="title-font sm:text-4xl text-3xl dark:text-black mb-4 font-medium text-[#9C77B7]">
                 Knausgaard typewriter readymade marfa
               </h1>
-              <p className="mb-8 leading-relaxed text-[#9C77B7]">
+              <p className="mb-8 leading-relaxed dark:text-black text-[#9C77B7]">
                 Kickstarter biodiesel roof party wayfarers cold-pressed. Palo
                 santo live-edge tumeric scenester copper mug flexitarian. Prism
                 vice offal plaid everyday carry. Gluten-free chia VHS squid
@@ -23,25 +23,27 @@ const ExtraTwo = () => {
               </p>
               <div className="flex w-full justify-center items-end">
                 <div className="relative mr-4 lg:w-full xl:w-1/2 w-2/4 md:w-full text-left">
-                  <label className="leading-7 text-sm text-gray-600"></label>
+                  <label className="leading-7 dark:bg-black dark:border-black text-sm text-gray-600"></label>
                   <input
-                    className='className=" hover:border-2 border-white hover:shadow-2xl w-full lg:w-[422px]  bg-opacity-50 rounded focus:ring-2 focus:ring-indigo-200 focus:bg-transparent border  bg-transparent text-sky-400 focus:border-indigo-500 text-base outline-none  py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"'
+                    className='className=" dark:border-black hover:border-2 border-white hover:shadow-2xl w-full lg:w-[422px]  bg-opacity-50 rounded focus:ring-2 focus:ring-indigo-200 focus:bg-transparent border  bg-transparent text-sky-400 focus:border-indigo-500 text-base outline-none  py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"'
                     type="text"
                     name=""
                     id=""
                   />
                 </div>
 
-                <button className="inline-flex  py-2 p-4 md:px-6 focus:outline-none bg-white hover:bg-transparent  hover:border-2  text-black hover:text-white rounded text-lg">
-                  Button
-                </button>
+                <Link to="#">
+                  <button className="inline-flex dark:border-black dark:border-2 dark:hover:bg-black dark:border-black py-2 p-4 md:px-6 focus:outline-none bg-white hover:bg-transparent  hover:border-2  text-black hover:text-white rounded text-lg">
+                    Button
+                  </button>
+                </Link>
               </div>
-              <p className="text-sm mt-2 text-gray-500 mb-8 w-full">
+              <p className="text-sm mt-2 text-gray-500 dark:text-black mb-8 w-full">
                 Neutra shabby chic ramps, viral fixie.
               </p>
               <div className="flex text-black">
                 <Link to="https://play.google.com/store/games?hl=en&gl=US&pli=1">
-                  <button className="bg-white hover:bg-transparent hover:text-white hover:border-2 inline-flex py-2 md:py-3 px-2 w-full md:px-5 rounded-lg items-center focus:outline-none">
+                  <button className="bg-white dark:hover:bg-black hover:bg-transparent hover:text-white hover:border-2 inline-flex py-2 md:py-3 px-2 w-full md:px-5 rounded-lg items-center focus:outline-none">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
@@ -51,7 +53,7 @@ const ExtraTwo = () => {
                       <path d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z"></path>
                     </svg>
                     <span className="ml-4 flex items-start flex-col leading-none">
-                      <span className="text-xs text-gray-400 hover:text-white mb-1">
+                      <span className="text-xs text-gray-400  hover:text-white mb-1">
                         GET IT ON
                       </span>
                       <span className="title-font font-medium">
@@ -62,7 +64,7 @@ const ExtraTwo = () => {
                 </Link>
 
                 <Link to="https://www.apple.com/store">
-                  <button className="bg-white hover:bg-transparent hover:text-white hover:border-2  inline-flex py-2 md:py-3 px-2 md:px-5 rounded-lg items-center ml-4  focus:outline-none">
+                  <button className="bg-white dark:hover:bg-black hover:bg-transparent hover:text-white hover:border-2  inline-flex py-2 md:py-3 px-2 md:px-5 rounded-lg items-center ml-4  focus:outline-none">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"

@@ -2,7 +2,7 @@ import './ExtraSectom.css'
 const ExtraSectin = () => {
     return (
       <div>
-        <div className=" body-font text-[#E1AAFF] mb-2 md:mb-20">
+        <div className=" body-font text-[#E1AAFF] dark:text-gray-700 mb-2 md:mb-20">
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-wrap -m-4">
               <div className="lg:w-1/3 any-section lg:mb-0 mb-6 p-4">
@@ -13,17 +13,17 @@ const ExtraSectin = () => {
                     alt=""
                   />
 
-                  <p className="leading-relaxed">
+                  <p className="leading-relaxed ">
                     Holden Caulfield, a fictional character created by J.D.
                     Salinger in The Catcher in the Rye is a disillusioned
                     teenager, while a Senior Product Designer designs and
                     improves product functionality and aesthetics
                   </p>
                   <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
-                  <h2 className=" text-[#AE42EB] font-medium title-font tracking-wider text-sm">
+                  <h2 className=" dark:text-gray-700 text-[#AE42EB] font-medium title-font tracking-wider text-sm">
                     HOLDEN CAULFIELD
                   </h2>
-                  <p className=" text-[#AE42EB]">Senior Product Designer</p>
+                  <p className=" dark:text-gray-700 text-[#AE42EB]">Senior Product Designer</p>
                 </div>
               </div>
               <div className="lg:w-1/3 lg:mb-0 any-section mb-6 p-4">
@@ -40,10 +40,10 @@ const ExtraSectin = () => {
                     a seamless digital world
                   </p>
                   <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
-                  <h2 className="text-[#9A3AD1] font-medium title-font tracking-wider text-sm">
+                  <h2 className="text-[#9A3AD1] dark:text-gray-700 font-medium title-font tracking-wider text-sm">
                     ALPER KAMU
                   </h2>
-                  <p className="text-[#AE42EB]">UI Develeoper</p>
+                  <p className="text-[#AE42EB] dark:text-gray-700">UI Develeoper</p>
                 </div>
               </div>
               <div className="lg:w-1/3 any-section lg:mb-0 p-4">
@@ -60,10 +60,10 @@ const ExtraSectin = () => {
                     technological growth and success in the digital landscape
                   </p>
                   <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
-                  <h2 className="text-[#AE42EB] font-medium title-font tracking-wider text-sm">
+                  <h2 className="text-[#AE42EB] dark:text-gray-700 font-medium title-font tracking-wider text-sm">
                     HENRY LETHAM
                   </h2>
-                  <p className="text-[#AE42EB]">CTO</p>
+                  <p className=" dark:text-gray-700 text-[#AE42EB]">CTO</p>
                 </div>
               </div>
             </div>

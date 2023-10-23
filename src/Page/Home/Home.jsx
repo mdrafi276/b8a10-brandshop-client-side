@@ -17,15 +17,15 @@ const Home = () => {
   console.log(brand);
   
     return (
-      <div className="bg-[#010313] ">
+      <div className="bg-[#010313] dark:bg-white ">
         <Navber></Navber>
         <Banner></Banner>
         <div className="text-center  mt-20   md:mt-40 md:mb-40 w-full lg:w-[800px]   md:w-[600px] mx-auto ">
-          <h1 className="  text-[#DCAAFF] font-bold mb-5 md:text-3xl text-xl sm:text-xl lg:text-4xl">
+          <h1 className="  dark:text-black text-[#DCAAFF] font-bold mb-5 md:text-3xl text-xl sm:text-xl lg:text-4xl">
             Your Ultimate Source for Cutting-Edge Electronics and Tech Gadgets
             Online.
           </h1>
-          <h1 className="  text-gray-400 text-[15px] md:text-sm">
+          <h1 className=" dark:text-gray-600 text-gray-400 text-[15px] md:text-sm">
             {" "}
             Discover the latest in high-tech wonders at our online store. We are
             your ultimate source for cutting-edge electronics and innovative
@@ -33,7 +33,7 @@ const Home = () => {
           </h1>
         </div>
         <div className="text-center mt-5 md:mt-10 ">
-          <h1 className=" md:text-4xl text-2xl lg:text-5xl font-bold text-[#CFA0F1]">
+          <h1 className=" md:text-4xl dark:text-black text-2xl lg:text-5xl font-bold text-[#CFA0F1]">
             BRAND
           </h1>
         </div>

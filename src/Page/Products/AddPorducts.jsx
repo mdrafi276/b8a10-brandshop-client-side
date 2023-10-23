@@ -43,7 +43,7 @@ const AddPorducts = () => {
       });
   };
   return (
-    <div className="bg-[#010313] h-[100vh]">
+    <div className="bg-[#010313] dark:bg-white h-[100vh]">
       <Navber></Navber>
       {/* Add products prentet container  */}
       <div className="bg-[#150F2D] lg:mt-10 text-white lg:w-[1000px] mx-auto w-full rounded-2xl lg:h-[500px]">

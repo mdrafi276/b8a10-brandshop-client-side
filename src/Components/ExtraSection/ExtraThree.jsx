@@ -9,7 +9,7 @@ const ExtraThree = () => {
           <div className="flex flex-col items-center justify-center">
             <div className="flex flex-col  max-w-7xl justify-center items-center space-y-3 w-full ">
               <div className="flex flex-col  mb-5 md:mb-20  md:items-start items-center justify-center  space-y-3 px-8 text-center ">
-                <div className="text-3xl md:text-6xl text-[#8231B3] font-bold ">
+                <div className="text-3xl md:text-6xl dark:text-black text-[#8231B3] font-bold ">
                   Make Your Fashion Look More Charming
                 </div>
               </div>

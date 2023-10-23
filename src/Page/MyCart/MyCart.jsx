@@ -6,6 +6,7 @@ import CartProduct from "../../Components/cartMap/cartProduct";
 import Swal from "sweetalert2";
 
 const MyCart = () => {
+  
   const handleDelete = (_id) => {
     console.log(_id);
     Swal.fire({
@@ -17,6 +18,7 @@ const MyCart = () => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
+      
       if (result.isConfirmed) {
         
        fetch(
@@ -30,6 +32,8 @@ const MyCart = () => {
            console.log(data);
            if (data.deletedCount > 0) {
              Swal.fire("Deleted!", "Your product has been deleted.", "success");
+             const filteredData = product.filter((item) => item._id !== _id);
+             setProduct(filteredData);
            }
          })
          .catch((error) => {
@@ -51,7 +55,7 @@ const MyCart = () => {
       .then((data) => setProduct(data));
   }, [userEmail]);
   return (
-    <div className="bg-[#010313] h-[100%]">
+    <div className="bg-[#010313] h-[500vh]">
       <Navber></Navber>
       <div className="text-center   md:mt-8  mt-2 lg:mt-16">
         <h1 className="text-4xl font-bold text-white">All Product</h1>

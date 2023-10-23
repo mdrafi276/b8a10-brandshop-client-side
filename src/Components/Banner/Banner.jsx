@@ -14,7 +14,7 @@ const Banner = () => {
                 latest innovations in electronics and technology gadgets. Your
                 ultimate destination for all things high-tech.
               </p>
-              <button className="btn text-white hover:text-black backdrop-blur bg-transparent">
+              <button className="btn text-white hover:text-black hover:bg-white backdrop-blur bg-transparent">
                 Get Started
               </button>
             </div>

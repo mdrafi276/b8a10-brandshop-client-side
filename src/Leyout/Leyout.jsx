@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 
 const Leyout = () => {
     return (
-        <div> 
+        <div className='dark:bg-white'> 
             
             <Outlet></Outlet>
             

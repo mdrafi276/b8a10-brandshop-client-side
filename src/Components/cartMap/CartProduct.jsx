@@ -21,7 +21,10 @@ const CartProduct = ({ productData, handleDelete }) => {
             <p className="text-sm">{driscription} </p>
           </div>
 
-          <button onClick= {() => handleDelete(_id) } className="btn hover:border-2 bg-white text-black w-full  hover:bg-transparent  hover:text-white hover:backdrop-blur-2xl">
+          <button
+            onClick={() => handleDelete(_id)}
+            className="btn hover:border-2 bg-white text-black w-full  hover:bg-transparent  hover:text-white hover:backdrop-blur-2xl"
+          >
             delete
           </button>
         </div>

@@ -42,6 +42,7 @@ const ProductDetails = () => {
           })(data);
         }
       });
+      
   };
 
   return (

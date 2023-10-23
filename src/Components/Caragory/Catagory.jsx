@@ -7,7 +7,7 @@ const Catagory = ({ brand }) => {
   return (
     <div>
       <Link to={name}>
-        <div className="card  hover:shadow-sky-400 shadow-[0_0_50px_#00000028] duration-300  hover:scale-105  lg:mb-20 lg:w-[320px] bg-[#140F2C] w-full text-white cursor-pointer hover:bg-transparent ">
+        <div className="card  hover:shadow-sky-400 shadow-[0_0_50px_#00000028] duration-300  hover:scale-105  lg:mb-20 lg:w-[320px] bg-[#140F2C] dark:hover:bg-[#140F2C] w-full text-white cursor-pointer hover:bg-transparent ">
           <figure className="px-10 pt-10">
             <img src={image} alt="Shoes" className="rounded-xl" />
           </figure>
