@@ -55,7 +55,7 @@ const MyCart = () => {
       .then((data) => setProduct(data));
   }, [userEmail]);
   return (
-    <div className="bg-[#010313] h-[500vh]">
+    <div className="bg-[#010313] min-h-[100vh]">
       <Navber></Navber>
       <div className="text-center   md:mt-8  mt-2 lg:mt-16">
         <h1 className="text-4xl font-bold text-white">All Product</h1>
@@ -67,7 +67,8 @@ const MyCart = () => {
           </div>
         </Link>
       </div>
-      <div className="grid w-full pb-5 md:pb-20 lg:grid-cols-3 duration-300 ease-in-out hover:scale-120   grid-cols-1  md:grid-cols-3  lg:w-[80%]  justify-center gap-8 mx-auto md:mt-5 mt-4 lg:mt-14">
+      {
+        product.length > 0 ? <div className="grid w-full pb-5 md:pb-20 lg:grid-cols-3 duration-300 ease-in-out hover:scale-120   grid-cols-1  md:grid-cols-3  lg:w-[80%]  justify-center gap-8 mx-auto md:mt-5 mt-4 lg:mt-14">
         {product.map((productData) => (
           <CartProduct
             key={productData._id}
@@ -75,7 +76,10 @@ const MyCart = () => {
             handleDelete={handleDelete}
           ></CartProduct>
         ))}
+      </div> : <div className="flex justify-center items-center md:mt-20 mt-11">
+        <h1 className="text-white text-2xl md:text-5xl">Nothing Purchae by you ! </h1>
       </div>
+      }
     </div>
   );
 };

@@ -33,7 +33,7 @@ const ExtraTwo = () => {
                 </div>
 
                 <Link to="#">
-                  <button className="inline-flex dark:border-black dark:border-2 dark:hover:bg-black dark:border-black py-2 p-4 md:px-6 focus:outline-none bg-white hover:bg-transparent  hover:border-2  text-black hover:text-white rounded text-lg">
+                  <button className="inline-flex  dark:border-2 dark:hover:bg-black dark:border-black py-2 p-4 md:px-6 focus:outline-none bg-white hover:bg-transparent  hover:border-2  text-black hover:text-white rounded text-lg">
                     Button
                   </button>
                 </Link>

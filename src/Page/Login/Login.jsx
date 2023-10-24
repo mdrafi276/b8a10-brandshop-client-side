@@ -48,7 +48,9 @@ const hangleGoogleLogin = () => {
        title: "সাব্বাস বেটা...",
        text: "Ligin success !",
        footer: '<a href="">Why do I have this issue?</a>',
+       
      });
+      navigate(location?.state ? location.state : "/");
     })
     .catch()
 };
