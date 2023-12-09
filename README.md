@@ -1,4 +1,4 @@
-# Tecnical and electronic 
+# Employee management
 
 Welcome to the **Tecnical and electronic ** website! This platform is designed to streamline the management and tecnical and electronic website. Below, you'll find information about the website, how to access it, and some key features.
 
